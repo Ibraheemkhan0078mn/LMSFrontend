@@ -54,7 +54,8 @@ const LandingPage = () => {
         try {
 
             async function fetchAllCourses() {
-                let response = await axios.get(import.meta.env.VITE_backend_base_Url+`/api/v1/TeacherRoutes/getAllCourses`)
+                let base_url= "https://lms-backend-five-kohl.vercel.app";
+                let response = await axios.get(`${base_url}/api/v1/TeacherRoutes/getAllCourses`)
                 if (response.data) {
                     console.log(response.data)
 
